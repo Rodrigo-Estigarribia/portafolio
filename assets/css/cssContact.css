@@ -1,0 +1,32 @@
+.contact-options{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 600px;
+  margin: 20px auto;
+}
+.contact-item{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #2b2f44;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: 3px solid #1a1d2e;
+  text-decoration: none;
+  color: #eee;
+  font-size: 18px;
+  font-family: 'Press Start 2P', monospace;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.pixel-icon{
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+}
+
+/* Hover */
+.contact-item:hover{
+  transform: scale(1.05);
+  border-color: var(--accent);
+}

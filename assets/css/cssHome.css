@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root{
+  --bg: #1a1d2e;
+  --panel: #2b2f44;
+  --accent: #00e5ff;
+  --muted: #bfbfbf;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);color:var(--muted);
+  font-family:Arial, sans-serif
+}
+
+
+/* Pixel font for titles */
+.pixel-title{
+  font-family:'Press Start 2P', monospace;
+  color:var(--accent);font-size:18px
+}
+
+/* Header */
+header{
+  font-family: 'press start 2p', monospace;
+  font-size: x-small;
+  background:var(--panel);
+  padding:12px;
+  border-bottom:4px solid #111
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1100px;
+  margin:0 auto
+}
+.nav a{color:var(--muted);
+  text-decoration:none;
+  margin-left:12px
+}
+.nav a:hover{
+  text-decoration:underline
+}
+
+#app{
+  max-width:1100px;
+  margin:24px auto;
+  padding:12px
+}
+
+.section-title{
+  font-family:'Press Start 2P',monospace;
+  font-size:16px;
+  background:#2b2f44;
+  padding:8px 12px;
+  border-radius:4px;color:var(--accent);
+  text-align:center
+}
+
+/* Buttons retro */
+.btn{
+  display:inline-block;
+  padding:8px 12px;
+  background:#ddd;
+  color:#111;
+  text-decoration:none;
+  border:3px solid #111;
+  border-radius:6px
+}
+
+.pixel-btn{
+  font-family:'Press Start 2P',monospace
+}
+
+.small{
+  padding:6px 8px
+}
+
+/* Images pixelated */
+.pixel-image{
+  image-rendering: pixelated;
+  max-width:100%
+}
+
+/* Footer */
+footer{
+  max-width:1100px;
+  margin:18px auto;
+  color:var(--muted);
+  text-align:center
+}
+
+/* Hero */
+.hero {
+    /* Contenedor principal: Centra y organiza */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Aumentamos el espacio para separar elementos */
+    padding: 40px 20px;
+    
+    /* Efecto de "panel" principal retro */
+    background: var(--panel);
+    border: 4px solid var(--accent); /* Borde de energía */
+    border-radius: 8px;
+    box-shadow: 0 0 15px var(--accent), 0 0 25px var(--bg) inset; /* Un sutil brillo */
+    max-width: 600px; /* Limita el ancho para que parezca un panel de menú */
+    margin: 40px auto; /* Centra el panel en la pantalla */
+}
+
+/* Título de la sección */
+.hero .pixel-title {
+    font-size: 24px; /* Hacemos el título más grande */
+    margin-bottom: 5px;
+    text-shadow: 2px 2px #111; /* Sombra sutil para el efecto 3D pixelado */
+}
+
+/* Avatar */
+.avatar-wrap {
+    /* Estilo de marco de perfil de jugador */
+    border: 3px solid var(--muted);
+    background: #111;
+    padding: 4px;
+    border-radius: 50%;
+    /* Mantenemos el tamaño original si es 140px, sino ajustamos: */
+    width: 150px; 
+    height: 150px;
+}
+
+.avatar {
+    width: 140px; /* Tamaño definido en el CSS anterior */
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%; /* Aseguramos que sea redondo */
+    border: 2px solid var(--accent); /* Borde interno de color */
+}
+
+/* Rol */
+.role {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--muted); /* Separador de estilo "línea de escaneo" */
+}
+
+/* Grid de Botones (Menú principal) */
+.btn-grid {
+    display: grid;
+    /* Los botones deben ser más grandes en el menú principal */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; /* Más espacio entre botones */
+    margin-top: 20px;
+    width: 90%; /* Ocupa casi todo el ancho del panel */
+}
+
+/* Ajustes a los botones generales para el menú */
+.pixel-btn {
+    text-align: center;
+    font-size: 10px; /* Ajustamos el tamaño de la fuente para que quepa en el botón */
+    transition: background 0.1s steps(2); /* Transición rápida pixelada */
+}
+
+.pixel-btn:hover {
+    background: var(--accent);
+    color: #111;
+    box-shadow: 0 0 5px var(--accent); /* Un efecto de selección retro */
+}
+
+/* Responsive para botones más pequeños en móvil */
+@media(max-width: 480px) {
+    .btn-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas muy pequeñas */
+        width: 100%;
+    }
+}

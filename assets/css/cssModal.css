@@ -1,0 +1,65 @@
+.modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  image-rendering: pixelated;
+}
+
+.hidden{
+  display: none;
+}
+
+.modal-content{
+  background: #222733;
+  padding: 20px;
+  border: 4px solid #111;
+  width: 90%;
+  max-width: 2000px;
+  max-height: 800px;
+  position: relative;
+  image-rendering: pixelated;
+}
+
+.close{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 32px;
+  cursor: pointer;
+  color: #fff;
+  transition: filter 0.2s steps(2);
+}
+
+.close:hover{
+  filter: brightness(1.3);
+}
+
+.carousel{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel-img{
+  width: 1500px;
+  height: 600px;
+  border: 3px solid #000;
+  image-rendering: pixelated;
+}
+
+.carousel-btn{
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.1s steps(2);
+}
+
+.carousel-btn:hover{
+  transform: scale(1.1);
+}
