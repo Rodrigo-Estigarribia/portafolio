@@ -1,6 +1,6 @@
 # Portafolio MVC - JavaScript Puro
 
-Proyecto ejemplo de portafolio personal usando MVC sin frameworks.
+Portafolio hecho con JavaScript puro y tratando de implementar el modelo vista controlador
 
 ## Cómo usar
 1. Clona o copia la estructura.
@@ -9,4 +9,3 @@ Proyecto ejemplo de portafolio personal usando MVC sin frameworks.
 
 ## Notas
 - Reemplaza imágenes en assets/img.
-- Si vas a publicar en GitHub Pages, sube la carpeta y publica la rama `main`.

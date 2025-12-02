@@ -12,7 +12,11 @@ export function renderProjects(){
             <p class="desc">${p.description}</p>
             <p class="tech">${p.technologies.join(' • ')}</p>
             <div class="card-actions">
-              <button class="btn small open-modal" data-index="${i}">Demo</button>
+              ${ 
+                p.images && p.images.length > 1
+                ? `<a class="btn small open-modal" data-index="${i}">Demo</a>`
+                : `<a href="${p.demo}" target="_blank" class="btn small">Demo</a>`
+              }
               <a href="${p.github}" target="_blank" class="btn small">Code</a>
             </div>
           </article>

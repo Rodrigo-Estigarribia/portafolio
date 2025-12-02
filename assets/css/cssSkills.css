@@ -1,4 +1,3 @@
-
 /* Caja de cada columna */
 .skills-box{
   background: #3a4060;
@@ -15,7 +14,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  flex-wrap: nowrap;  /* Fuerza que estén lado a lado */
+  flex-wrap: nowrap;  /* Fuerza que estén lado a lado en escritorio */
 }
 
 /* Subtítulo */
@@ -43,17 +42,46 @@
   padding: 10px 16px;
   width: 100%;
   max-width: 220px;
-
   border: 2px solid #171a26;
   border-radius: 10px;
-
   font-size: 16px;
   color: #f1f1f1;
   text-align: center;
-
   box-shadow: 
     0 0 4px #0003 inset,
     0 0 3px #0003;
-
   image-rendering: pixelated;
+}
+
+/*Media queries*/
+/* Tablets / pantallas medianas */
+@media (max-width: 900px){
+  .skills-columns{
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .skills-box{
+    width: 100%;
+  }
+}
+
+/* Celulares / pantallas pequeñas */
+@media (max-width: 600px){
+  .skills-columns{
+    flex-direction: column;   /* Uno debajo del otro */
+    align-items: center;
+    gap: 15px;
+  }
+  .skills-box{
+    width: 100%;
+    padding: 20px;
+  }
+  .skills-subtitle{
+    font-size: 16px;
+  }
+  .skill-item{
+    max-width: 100%;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
 }

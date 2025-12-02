@@ -10,7 +10,12 @@ export function initHeader(){
   header.innerHTML = `
     <div class="header-inner">
       <div class="logo pixel-title">Portafolio</div>
-      <nav class="nav">
+
+      <button class="navMenu" id="options">
+        ☰
+      </button>
+
+      <nav class="nav" id="nav-menu">
         <a href="#home">Home</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -19,6 +24,13 @@ export function initHeader(){
       </nav>
     </div>
   `;
+
+  const hamburger = document.getElementById('options');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
 }
 
 export function loadHome(){
