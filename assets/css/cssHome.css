@@ -46,6 +46,9 @@ header{
 
 /*Menu de opcciones para mobile*/
 
+.navMenu{
+  display:none;
+}
 @media(max-width: 700px){
 
   .nav {
@@ -65,6 +68,7 @@ header{
   }
 
   .navMenu {
+    display: block;
     font-size: 24px;
     background: none;
     color: var(--accent);
