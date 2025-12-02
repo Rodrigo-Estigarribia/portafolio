@@ -5,6 +5,7 @@
   width: 600px;
   margin: 20px auto;
 }
+
 .contact-item{
   display: flex;
   align-items: center;
@@ -19,6 +20,7 @@
   font-family: 'Press Start 2P', monospace;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
+
 .pixel-icon{
   width: 32px;
   height: 32px;
@@ -29,4 +31,37 @@
 .contact-item:hover{
   transform: scale(1.05);
   border-color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 700px){
+  .contact-options{
+    width: 100%;
+    padding: 0 16px;
+    gap: 14px;
+  }
+
+  .contact-item{
+    padding: 12px 14px;
+    font-size: 14px; 
+    gap: 10px;
+  }
+
+  .pixel-icon{
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Más pequeño aún (móviles chicos) */
+@media (max-width: 400px){
+  .contact-item{
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .pixel-icon{
+    width: 20px;
+    height: 20px;
+  }
 }
