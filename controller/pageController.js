@@ -25,12 +25,27 @@ export function initHeader(){
     </div>
   `;
 
-  const hamburger = document.getElementById('options');
+  const options = document.getElementById('options');
   const navMenu = document.getElementById('nav-menu');
 
-  hamburger.addEventListener('click', () => {
+  options.addEventListener('click', () => {
     navMenu.classList.toggle('show');
   });
+
+  // Cerrar menú al hacer clic fuera
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !options.contains(e.target)) {
+      navMenu.classList.remove('show');
+    }
+  });
+
+  // Cerrar al seleccionar una opción del menú
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show');
+    });
+  });
+
 }
 
 export function loadHome(){
